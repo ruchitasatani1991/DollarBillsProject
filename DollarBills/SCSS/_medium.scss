@@ -1,0 +1,20 @@
+  /*main*/
+  
+  main {
+      figure.photo {
+          width: 50% - $gutterDouble;
+          margin: .5rem $gutter;
+          float: left;
+      }
+      div.blog {
+          article {
+              margin: .5rem $gutter;
+              width: 50%-$gutterDouble;
+              float: left;
+              p {
+                  line-height: 130%;
+                  color: $fontColor;
+              }
+          }
+      }
+  }

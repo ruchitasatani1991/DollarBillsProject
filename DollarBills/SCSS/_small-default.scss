@@ -1,0 +1,135 @@
+/*prevent adjustment of font size inIE*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+
+/*apply box layout*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $defaultFont;
+    font-weight: $normalFontWeight;
+    font-size: 16px;
+}
+
+header {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    padding: 1rem $gutter;
+    h1 {
+        font-size: 2rem;
+        font-weight: $normalFontWeight;
+    }
+    h2 {
+        font-weight: $normalFontWeight;
+        font-size: .90rem;
+    }
+}
+
+nav {
+    background-color: $secondaryColor;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    ul {
+        li {
+            float: left;
+            width: 25%;
+            border-right: 1px solid rgba(0, 0, 0, .4);
+            a {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                color: $primaryColor;
+                font-weight: $boldFontWeight;
+                padding: .5rem 0;
+                transition: background 0.75s ease, color 0.75s ease;
+            }
+            a:hover {
+                color: $secondaryColor;
+                background-color: $primaryColor;
+            }
+        }
+        li.active {
+            a {
+                background-color: darken($secondaryColor, 25%)
+            }
+        }
+        li:last-child {
+            border-right: none;
+        }
+    }
+}
+
+main {
+    figure.banner {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: $primaryColor;
+    }
+    figure.photo {
+        width: 100%-$gutterDouble;
+        margin: .5rem $gutter;
+        border: 1px solid $secondaryColor;
+        img {
+            width: 100%;
+        }
+        figcaption {
+            text-align: center;
+            border-color: $primaryColor;
+        }
+    }
+    h2 {
+        font-size: 2rem;
+        margin: 1rem 0 0 $gutter;
+        color: $primaryColor;
+    }
+    div.blog {
+        h3 {
+            font-size: 1.2rem;
+            color: lighten($primaryColor, 20%);
+        }
+        article {
+            margin: .5rem $gutter;
+            width: 100%-$gutterDouble;
+            p {
+                line-height: 130%;
+                color: $fontColor;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $primaryColor;
+    p {
+        color: $secondaryColor;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.25rem 0;
+    }
+}
+
+
+/*misc setting */
+
+.clearfix:after {
+    visibility: hidden;
+    display: table;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
